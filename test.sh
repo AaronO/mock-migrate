@@ -21,7 +21,7 @@ mkdir -p /tmp/out_tmp
 curl "http://localhost:5566/in.tgz" 2>/dev/null | tar -C /tmp/out_tmp -zxv
 
 # Migrate files
-mv /tmp/out_tmp/home ./out/home
+cp -R -n /tmp/out_tmp/home ./out/
 
 # Kill server
 kill -s KILL ${PID}
